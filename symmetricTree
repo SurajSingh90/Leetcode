@@ -1,0 +1,19 @@
+var isSymmetric = function(root) {
+    if (!root) { // Sanity check
+        return true;
+    }
+    function ismirror(t1,t2){
+        if(!t1 && !t2){
+            return true
+        }
+        if(!t1 || !t2 || t1.val !== t2.val){
+            return false
+        }
+        
+        return ismirror(t1.left, t2.right) && ismirror(t1.right, t2.left);
+        
+    }
+    
+    return ismirror(root.left, root.right);
+    
+};
