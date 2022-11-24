@@ -1,0 +1,9 @@
+var thirdMax = function(nums) {
+    let temp = [...new Set(nums)].sort((a,b)=> b-a)
+    // nums.sort((a,b) => b-a);
+    
+    return temp[2] ?? Math.max(...temp)
+     
+   
+    
+};
