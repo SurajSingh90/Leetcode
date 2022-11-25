@@ -1,0 +1,21 @@
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var intersection = function(nums1, nums2) {
+    const num1Obj = {};
+    const res = {};
+    for(let i=0; i<nums1.length; i++){
+        num1Obj[nums1[i]] = true
+    }
+
+    for(let i=0; i<nums2.length; i++){
+        if(num1Obj[nums2[i]] != undefined){
+            res[nums2[i]] = true;
+        }
+    }
+    console.log(num1Obj,res)
+
+    return Object.keys(res);
+};
