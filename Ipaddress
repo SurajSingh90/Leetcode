@@ -1,0 +1,14 @@
+var defangIPaddr = function(address) {
+    let str = ""
+    for(let i =0; i<address.length; i++){
+        if(address[i]=== '.'){
+            str += '[.]'
+        }
+        else{
+            str += address[i]
+        }
+    }
+    // console.log(str)
+    return str
+    
+};
